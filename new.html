@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f6f8fc;
+        color: #232946;
+      }
+      nav {
+        background: #232946;
+        color: #fff;
+        padding: 1em 0;
+      }
+      .nav-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-weight: bold;
+        font-size: 1.5em;
+        color: #eebbc3;
+        letter-spacing: 2px;
+      }
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.5em;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-links a {
+        color: #eebbc3;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: #f6c90e;
+      }
+      main.hero {
+        background: linear-gradient(120deg, #eebbc3 0%, #cbe8f9 100%);
+        padding: 60px 0;
+      }
+      .hero-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .hero-content h1 {
+        font-size: 2.8em;
+        margin-bottom: 0.5em;
+        color: #232946;
+      }
+      .hero-content p {
+        font-size: 1.2em;
+        color: #393e46;
+        margin-bottom: 1.5em;
+      }
+      .hero-content a {
+        background: #232946;
+        color: #eebbc3;
+        padding: 0.8em 2em;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 1.1em;
+        transition: background 0.2s, color 0.2s;
+      }
+      .hero-content a:hover {
+        background: #eebbc3;
+        color: #232946;
+      }
+      section.features {
+        background: #fff;
+        padding: 40px 0;
+      }
+      .features-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .features-list {
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .feature {
+        background: #cbe8f9;
+        padding: 2em 1.5em;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #0001;
+        width: 250px;
+        transition: background 0.2s;
+      }
+      .feature:hover {
+        background: #eebbc3;
+      }
+      .feature h3 {
+        color: #232946;
+      }
+      .feature p {
+        color: #393e46;
+      }
+      section.testimonials {
+        background: #f6f8fc;
+        padding: 40px 0;
+      }
+      .testimonials-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .testimonials-list {
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        min-height: 200px;
+      }
+      .testimonial {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: opacity 0.5s;
+      }
+      .testimonial.active {
+        opacity: 1;
+        pointer-events: auto;
+        position: relative;
+      }
+      .testimonial-controls {
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+      }
+      .testimonial-controls button {
+        background: #eebbc3;
+        color: #232946;
+        border: none;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+      .testimonial-controls button:hover {
+        background: #232946;
+        color: #eebbc3;
+      }
+      .testimonial {
+        background: #fff;
+        padding: 1.5em;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #0001;
+        width: 300px;
+      }
+      .testimonial p {
+        font-style: italic;
+        color: #393e46;
+      }
+      .testimonial .author {
+        margin-top: 1em;
+        color: #232946;
+        font-weight: bold;
+      }
+      section.newsletter {
+        background: #fff;
+        padding: 40px 0;
+      }
+      .newsletter-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .newsletter-form {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        flex-wrap: wrap;
+      }
+      .newsletter-form input[type="email"] {
+        padding: 0.7em 1em;
+        border-radius: 4px;
+        border: 1px solid #cbe8f9;
+        font-size: 1em;
+        min-width: 220px;
+      }
+      .newsletter-form button {
+        background: #232946;
+        color: #eebbc3;
+        border: none;
+        border-radius: 4px;
+        padding: 0.7em 2em;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+      .newsletter-form button:hover {
+        background: #eebbc3;
+        color: #232946;
+      }
+      footer {
+        background: #232946;
+        color: #eebbc3;
+        text-align: center;
+        padding: 1.5em 0;
+        margin-top: 40px;
+      }
+      section.process {
+        background: #cbe8f9;
+        padding: 40px 0;
+      }
+      .process-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .process-steps {
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2em;
+      }
+      .step {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #0001;
+        padding: 2em 1.5em;
+        width: 220px;
+        position: relative;
+        transition: box-shadow 0.2s;
+      }
+      .step:hover {
+        box-shadow: 0 4px 16px #0002;
+      }
+      .step-number {
+        background: #eebbc3;
+        color: #232946;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin: 0 auto 1em auto;
+      }
+      section.team {
+        background: #fff;
+        padding: 40px 0;
+      }
+      .team-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .team-list {
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2em;
+      }
+      .team-member {
+        background: #cbe8f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #0001;
+        padding: 2em 1.5em 1em 1.5em;
+        width: 220px;
+        transition: background 0.2s;
+      }
+      .team-member:hover {
+        background: #eebbc3;
+      }
+      .team-member img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1em;
+        border: 3px solid #eebbc3;
+      }
+      .team-member h3 {
+        margin: 0.5em 0 0.2em 0;
+        color: #232946;
+      }
+      .team-member p {
+        color: #393e46;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">MySite</div>
+        <ul class="nav-links">
+          <li><a href="new.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="hero">
+      <div class="hero-content">
+        <h1>Welcome to MySite</h1>
+        <p>
+          Your one-stop solution for all your needs. Discover our services and
+          learn more about us.
+        </p>
+        <a href="#">Get Started</a>
+      </div>
+    </main>
+    <section class="features">
+      <div class="features-container">
+        <h2>Our Features</h2>
+        <div class="features-list">
+          <div class="feature">
+            <h3>Fast Delivery</h3>
+            <p>
+              Get your services delivered quickly and efficiently every time.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>24/7 Support</h3>
+            <p>Our team is available around the clock to assist you.</p>
+          </div>
+          <div class="feature">
+            <h3>Affordable Pricing</h3>
+            <p>
+              We offer the best value for your money with competitive rates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="testimonials-container">
+        <h2>Testimonials</h2>
+        <div class="testimonials-list" id="testimonial-list">
+          <div class="testimonial active">
+            <p>"Amazing service! Highly recommend to everyone."</p>
+            <div class="author">- Alex</div>
+          </div>
+          <div class="testimonial">
+            <p>"Support was quick and solved my issue instantly."</p>
+            <div class="author">- Jamie</div>
+          </div>
+          <div class="testimonial">
+            <p>"The team was professional and exceeded my expectations!"</p>
+            <div class="author">- Sneha</div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button onclick="showTestimonial(-1)">&#8592;</button>
+          <button onclick="showTestimonial(1)">&#8594;</button>
+        </div>
+      </div>
+      <script>
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll(".testimonial");
+        function showTestimonial(dir) {
+          testimonials[currentTestimonial].classList.remove("active");
+          currentTestimonial =
+            (currentTestimonial + dir + testimonials.length) %
+            testimonials.length;
+          testimonials[currentTestimonial].classList.add("active");
+        }
+      </script>
+    </section>
+    <section class="newsletter">
+      <section class="process">
+        <div class="process-container">
+          <h2>How It Works</h2>
+          <div class="process-steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h3>Sign Up</h3>
+              <p>Create your free account in just a few clicks.</p>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <h3>Choose Service</h3>
+              <p>Select the service that fits your needs best.</p>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <h3>Enjoy Results</h3>
+              <p>Relax while we deliver top-notch results to you.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team">
+        <div class="team-container">
+          <h2>Meet Our Team</h2>
+          <div class="team-list">
+            <div class="team-member">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Team Member"
+              />
+              <h3>Rahul Sharma</h3>
+              <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Team Member"
+              />
+              <h3>Priya Singh</h3>
+              <p>Lead Designer</p>
+            </div>
+            <div class="team-member">
+              <img
+                src="https://randomuser.me/api/portraits/men/65.jpg"
+                alt="Team Member"
+              />
+              <h3>Arjun Patel</h3>
+              <p>Head of Support</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="newsletter-container">
+        <h2>Subscribe to our Newsletter</h2>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </body>
+  <footer>
+    <div style="max-width: 1000px; margin: 0 auto">
+      &copy; 2025 MySite. All rights reserved.
+    </div>
+  </footer>
+</html>

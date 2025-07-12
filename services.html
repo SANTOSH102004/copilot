@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - MySite</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f6f8fc;
+        color: #232946;
+      }
+      nav {
+        background: #232946;
+        color: #fff;
+        padding: 1em 0;
+      }
+      .nav-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-weight: bold;
+        font-size: 1.5em;
+        color: #eebbc3;
+        letter-spacing: 2px;
+      }
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.5em;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-links a {
+        color: #eebbc3;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: #f6c90e;
+      }
+      .services-section {
+        max-width: 1000px;
+        margin: 3em auto;
+        text-align: center;
+      }
+      .services-section h1 {
+        color: #232946;
+        margin-bottom: 1em;
+      }
+      .services-list {
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2em;
+      }
+      .service-card {
+        background: #cbe8f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #0001;
+        padding: 2em 1.5em;
+        width: 250px;
+        transition: background 0.2s;
+      }
+      .service-card:hover {
+        background: #eebbc3;
+      }
+      .service-card h3 {
+        color: #232946;
+      }
+      .service-card p {
+        color: #393e46;
+      }
+      footer {
+        background: #232946;
+        color: #eebbc3;
+        text-align: center;
+        padding: 1.5em 0;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">MySite</div>
+        <ul class="nav-links">
+          <li><a href="new.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div style="margin: 3em 0 0 0">
+        <h2 style="color: #232946; margin-bottom: 1em">How We Work</h2>
+        <div
+          style="
+            display: flex;
+            gap: 2em;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <div
+            style="
+              background: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px #0001;
+              padding: 2em 1.5em;
+              width: 220px;
+              text-align: center;
+            "
+          >
+            <div style="font-size: 2em; margin-bottom: 0.5em">📝</div>
+            <h4 style="color: #232946">Consult</h4>
+            <p style="color: #393e46">
+              We listen to your needs and plan the best solution for your
+              business.
+            </p>
+          </div>
+          <div
+            style="
+              background: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px #0001;
+              padding: 2em 1.5em;
+              width: 220px;
+              text-align: center;
+            "
+          >
+            <div style="font-size: 2em; margin-bottom: 0.5em">💻</div>
+            <h4 style="color: #232946">Develop</h4>
+            <p style="color: #393e46">
+              Our team builds your project using the latest technologies and
+              best practices.
+            </p>
+          </div>
+          <div
+            style="
+              background: #fff;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px #0001;
+              padding: 2em 1.5em;
+              width: 220px;
+              text-align: center;
+            "
+          >
+            <div style="font-size: 2em; margin-bottom: 0.5em">🚀</div>
+            <h4 style="color: #232946">Deliver</h4>
+            <p style="color: #393e46">
+              We launch your solution and provide ongoing support for your
+              success.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div style="margin: 3em 0 0 0">
+        <h2 style="color: #232946; margin-bottom: 1em">Technologies We Use</h2>
+        <div
+          style="
+            display: flex;
+            gap: 2em;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <div
+            style="
+              background: #cbe8f9;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px #0001;
+              padding: 1.5em 1.5em;
+              width: 180px;
+              text-align: center;
+            "
+          >
+            <div style="font-size: 2em; margin-bottom: 0.5em">🌐</div>
+            <div style="color: #232946; font-weight: bold">HTML5 & CSS3</div>
+          </div>
+          <div
+            style="
+              background: #cbe8f9;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px #0001;
+              padding: 1.5em 1.5em;
+              width: 180px;
+              text-align: center;
+            "
+          >
+            <div style="font-size: 2em; margin-bottom: 0.5em">⚛️</div>
+            <div style="color: #232946; font-weight: bold">React</div>
+          </div>
+          <div
+            style="
+              background: #cbe8f9;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px #0001;
+              padding: 1.5em 1.5em;
+              width: 180px;
+              text-align: center;
+            "
+          >
+            <div style="font-size: 2em; margin-bottom: 0.5em">🐍</div>
+            <div style="color: #232946; font-weight: bold">Python</div>
+          </div>
+          <div
+            style="
+              background: #cbe8f9;
+              border-radius: 8px;
+              box-shadow: 0 2px 8px #0001;
+              padding: 1.5em 1.5em;
+              width: 180px;
+              text-align: center;
+            "
+          >
+            <div style="font-size: 2em; margin-bottom: 0.5em">☁️</div>
+            <div style="color: #232946; font-weight: bold">Cloud & APIs</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="services-section">
+      <h1>Our Services</h1>
+      <div class="services-list">
+        <div class="service-card">
+          <h3>Web Development</h3>
+          <p>
+            Modern, responsive websites and web apps built to your
+            specifications.
+          </p>
+        </div>
+        <div class="service-card">
+          <h3>UI/UX Design</h3>
+          <p>Beautiful, user-friendly designs that delight your customers.</p>
+        </div>
+        <div class="service-card">
+          <h3>Consulting</h3>
+          <p>
+            Expert advice and strategy to help your business grow and succeed.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div style="max-width: 1000px; margin: 0 auto">
+        &copy; 2025 MySite. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

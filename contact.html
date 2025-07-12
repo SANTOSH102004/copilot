@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - MySite</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #f6f8fc 60%, #eebbc3 100%);
+        color: #232946;
+        min-height: 100vh;
+      }
+      nav {
+        background: linear-gradient(90deg, #232946 80%, #eebbc3 100%);
+        color: #fff;
+        padding: 1em 0;
+        box-shadow: 0 2px 8px #0002;
+      }
+      .nav-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-weight: bold;
+        font-size: 1.7em;
+        color: #eebbc3;
+        letter-spacing: 2.5px;
+        text-shadow: 1px 2px 8px #23294622;
+      }
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 2em;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-links a {
+        color: #eebbc3;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        font-size: 1.08em;
+        padding: 0.3em 0.7em;
+        border-radius: 4px;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      }
+      .nav-links a:hover {
+        background: #eebbc3;
+        color: #232946;
+        box-shadow: 0 2px 8px #eebbc355;
+      }
+      .contact-section {
+        max-width: 950px;
+        margin: 3em auto;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 16px;
+        box-shadow: 0 4px 24px #23294622;
+        padding: 3em 2.5em 2.5em 2.5em;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .contact-section::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(circle, #eebbc3 60%, #fff0 100%);
+        opacity: 0.25;
+        z-index: 0;
+      }
+      .contact-section h1 {
+        color: #232946;
+        margin-bottom: 1em;
+        font-size: 2.3em;
+        letter-spacing: 1px;
+        font-weight: 700;
+      }
+      .contact-section p {
+        color: #393e46;
+        font-size: 1.13em;
+        margin-bottom: 0.5em;
+      }
+      .contact-form {
+        max-width: 420px;
+        margin: 2em auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.1em;
+        background: #f6f8fc;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px #cbe8f955;
+        padding: 2em 1.5em 1.5em 1.5em;
+        position: relative;
+        z-index: 1;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        padding: 0.8em 1.1em;
+        border-radius: 6px;
+        border: 1.5px solid #cbe8f9;
+        font-size: 1.05em;
+        background: #fff;
+        transition: border 0.2s, box-shadow 0.2s;
+        outline: none;
+      }
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border: 1.5px solid #eebbc3;
+        box-shadow: 0 2px 8px #eebbc355;
+      }
+      .contact-form textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+      .contact-form button {
+        background: linear-gradient(90deg, #232946 70%, #eebbc3 100%);
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 0.8em 2.2em;
+        font-size: 1.08em;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 8px #23294622;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      }
+      .contact-form button:hover {
+        background: linear-gradient(90deg, #eebbc3 60%, #232946 100%);
+        color: #232946;
+        box-shadow: 0 4px 16px #eebbc355;
+      }
+      .contact-info-map {
+        margin: 3em 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+        align-items: flex-start;
+        position: relative;
+        z-index: 1;
+      }
+      .info-box,
+      .map-box {
+        min-width: 260px;
+        max-width: 350px;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px #23294611;
+        padding: 2em 1.5em;
+        background: #f6f8fc;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .info-box:hover,
+      .map-box:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 8px 32px #eebbc355;
+      }
+      .info-box h3,
+      .map-box h3 {
+        color: #232946;
+        margin-top: 0;
+        font-size: 1.25em;
+        margin-bottom: 0.7em;
+      }
+      .info-box p,
+      .map-box p {
+        color: #393e46;
+        margin-bottom: 0.7em;
+        font-size: 1.05em;
+      }
+      .info-box a {
+        color: #232946;
+        text-decoration: underline;
+        transition: color 0.2s;
+      }
+      .info-box a:hover {
+        color: #eebbc3;
+      }
+      .map-box {
+        background: #fff;
+        padding: 1.5em;
+        text-align: center;
+      }
+      .map-box img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 1px 8px #23294622;
+        margin-bottom: 0.7em;
+      }
+      @media (max-width: 700px) {
+        .contact-section {
+          padding: 1.2em 0.5em;
+        }
+        .contact-info-map {
+          flex-direction: column;
+          gap: 1.5em;
+        }
+        .info-box,
+        .map-box {
+          max-width: 100%;
+        }
+      }
+      footer {
+        background: #232946;
+        color: #eebbc3;
+        text-align: center;
+        padding: 1.5em 0;
+        margin-top: 40px;
+        font-size: 1.08em;
+        letter-spacing: 0.5px;
+        box-shadow: 0 -2px 8px #23294622;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">MySite</div>
+        <ul class="nav-links">
+          <li><a href="new.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+      <p>Have questions or want to work with us? Reach out anytime!</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info-map">
+        <div class="info-box">
+          <h3>Get in Touch</h3>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:info@mysite.com">info@mysite.com</a>
+          </p>
+          <p>
+            <strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567 890</a>
+          </p>
+          <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+        </div>
+        <div class="map-box">
+          <h3>Find Us</h3>
+          <img
+            src="https://maps.app.goo.gl/Prc6pNctKfWZTy998"
+            alt="Map"
+          />
+          <p>
+            We are located in the heart of the city. Visit us for a coffee and a
+            chat!
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div style="max-width: 1000px; margin: 0 auto">
+        &copy; 2025 MySite. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
