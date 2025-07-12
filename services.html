@@ -234,6 +234,140 @@
         letter-spacing: 0.5px;
         box-shadow: 0 -2px 8px #23294622;
       }
+      /* Testimonials Section */
+      .testimonials-section {
+        max-width: 900px;
+        margin: 3em auto 0 auto;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 16px;
+        box-shadow: 0 4px 24px #23294622;
+        padding: 2.5em 2em 2em 2em;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .testimonials-section h2 {
+        color: #232946;
+        margin-bottom: 1em;
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+      .testimonials-list {
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+      }
+      .testimonial-card {
+        background: #f6f8fc;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px #23294611;
+        padding: 1.5em 1.2em;
+        width: 260px;
+        text-align: left;
+        font-size: 1em;
+        position: relative;
+      }
+      .testimonial-card .author {
+        margin-top: 1em;
+        font-weight: bold;
+        color: #232946;
+        font-size: 1.05em;
+      }
+      /* FAQ Section */
+      .faq-section {
+        max-width: 900px;
+        margin: 3em auto 0 auto;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 16px;
+        box-shadow: 0 4px 24px #23294622;
+        padding: 2.5em 2em 2em 2em;
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+      }
+      .faq-section h2 {
+        color: #232946;
+        margin-bottom: 1em;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+      .faq-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .faq-item {
+        margin-bottom: 1.2em;
+      }
+      .faq-q {
+        color: #232946;
+        font-weight: 600;
+        margin-bottom: 0.2em;
+      }
+      .faq-a {
+        color: #393e46;
+        margin-left: 1em;
+      }
+      /* Team Section */
+      .team-section {
+        max-width: 900px;
+        margin: 3em auto 0 auto;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 16px;
+        box-shadow: 0 4px 24px #23294622;
+        padding: 2.5em 2em 2em 2em;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .team-section h2 {
+        color: #232946;
+        margin-bottom: 1em;
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+      .team-list {
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+      }
+      .team-card {
+        background: #cbe8f9;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px #0001;
+        padding: 1.5em 1.2em;
+        width: 180px;
+        text-align: center;
+      }
+      .team-card img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 0.7em;
+        border: 2px solid #eebbc3;
+      }
+      .team-card .name {
+        font-weight: bold;
+        color: #232946;
+        margin-bottom: 0.2em;
+      }
+      .team-card .role {
+        color: #393e46;
+        font-size: 0.98em;
+        margin-bottom: 0.5em;
+      }
+      .team-card .bio {
+        color: #393e46;
+        font-size: 0.95em;
+      }
     </style>
   </head>
   <body>
@@ -317,6 +451,105 @@
           <p>
             Expert advice and strategy to help your business grow and succeed.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonials-list">
+        <div class="testimonial-card">
+          <div>
+            "The team at MySite exceeded our expectations! Our new website is
+            stunning and easy to use."
+          </div>
+          <div class="author">- Priya S.</div>
+        </div>
+        <div class="testimonial-card">
+          <div>
+            "Professional, creative, and always available for support. Highly
+            recommended!"
+          </div>
+          <div class="author">- John D.</div>
+        </div>
+        <div class="testimonial-card">
+          <div>
+            "Their consulting services helped our business grow faster than we
+            imagined."
+          </div>
+          <div class="author">- Ayesha K.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <ul class="faq-list">
+        <li class="faq-item">
+          <div class="faq-q">Q: How long does a typical project take?</div>
+          <div class="faq-a">
+            A: Most projects are completed within 2-6 weeks, depending on
+            complexity.
+          </div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-q">Q: Do you offer post-launch support?</div>
+          <div class="faq-a">
+            A: Yes, we provide ongoing support and maintenance for all our
+            clients.
+          </div>
+        </li>
+        <li class="faq-item">
+          <div class="faq-q">Q: Can you redesign my existing website?</div>
+          <div class="faq-a">
+            A: Absolutely! We specialize in redesigns and modernizing older
+            sites.
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+      <h2>Meet Our Team</h2>
+      <div class="team-list">
+        <div class="team-card">
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Team Member"
+          />
+          <div class="name">Rahul Sharma</div>
+          <div class="role">Lead Developer</div>
+          <div class="bio">
+            Rahul brings 8+ years of experience in web development and loves
+            building scalable solutions.
+          </div>
+        </div>
+        <div class="team-card">
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="Team Member"
+          />
+          <div class="name">Sneha Patel</div>
+          <div class="role">UI/UX Designer</div>
+          <div class="bio">
+            Sneha crafts beautiful, user-friendly interfaces and is passionate
+            about design trends.
+          </div>
+        </div>
+        <div class="team-card">
+          <img
+            src="https://randomuser.me/api/portraits/men/65.jpg"
+            alt="Team Member"
+          />
+          <div class="name">Amit Verma</div>
+          <div class="role">Project Manager</div>
+          <div class="bio">
+            Amit ensures every project runs smoothly and clients are always
+            informed and happy.
+          </div>
         </div>
       </div>
     </section>
